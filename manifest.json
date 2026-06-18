@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "TGV Lyria Onboard Portal Fix (unofficial)",
+  "version": "1.0.0",
+  "description": "Stops the TGV Lyria onboard WiFi portal from crashing to a blank 'Application error' screen during train delays. Client-side only.",
+  "content_scripts": [
+    {
+      "matches": ["https://wifi.tgv-lyria.com/*"],
+      "js": ["fix.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}
